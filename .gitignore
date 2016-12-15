@@ -49,3 +49,9 @@ docker-compose.override.yml
 # google play store
 #
 android/app/store-credentials.json
+
+# dist folder
+dist
+
+# constants.js
+constants.js

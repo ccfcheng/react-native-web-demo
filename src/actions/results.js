@@ -1,6 +1,6 @@
 import url from 'url';
 import axios from 'axios';
-import * as Constants from '../constants';
+import { API_KEY } from '../constants';
 // Standard dispatch action creator
 export const saveStories = (stories) => ({
   type: 'SAVE_STORIES',
@@ -14,10 +14,10 @@ export const loadStoriesIntoState = () => (dispatch, getState) => {
   const urlObj = {
     protocol: 'https',
     slashes: true,
-    hostname: Constants.HOSTNAME,
-    pathname: `${Constants.PATH}${section}.json`,
+    hostname: 'api.nytimes.com',
+    pathname: `/svc/topstories/v2/${section}.json`,
     query: {
-      'api-key': Constants.API_KEY,
+      'api-key': API_KEY,
     },
   };
   const urlString = url.format(urlObj);
