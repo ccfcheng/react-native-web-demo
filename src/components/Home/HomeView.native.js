@@ -4,27 +4,13 @@ import {
   Text,
   View,
 } from 'react-native';
+import Selection from '../../containers/Selection';
 
 export default class HomeView extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.welcome}>
-          A new React Native Heading
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-        <Text style={styles.instructions}>
-          Another changing text view
-        </Text>
+        <Selection />
       </View>
     );
   }
